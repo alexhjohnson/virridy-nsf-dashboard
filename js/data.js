@@ -4,6 +4,7 @@ const GRANT_DATA = {
   pi: "Evan Thomas",
   startDate: "2025-06-05",
   periods: [
+    { period: "Jun 2025", date: "2025-06-05" },
     { period: "Jul 2025", date: "2025-07-15" },
     { period: "Oct 2025", date: "2025-10-15" },
     { period: "Nov 2025", date: "2025-11-15" },
@@ -21,6 +22,7 @@ const GRANT_DATA = {
           id: "1a",
           title: "Secure Corresponding Adjustment Letter of Authorization from Rwanda",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -34,6 +36,7 @@ const GRANT_DATA = {
           id: "1b",
           title: "Submit Verra PDD for Turkey/Netafim program",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -47,6 +50,7 @@ const GRANT_DATA = {
           id: "1c",
           title: "Third-party auditing of 4 Gold Standard programs (Kenya, DRC, Madagascar)",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 75 },
             { period: "Nov 2025", date: "2025-11-15", pct: 75 },
@@ -60,6 +64,7 @@ const GRANT_DATA = {
           id: "1d",
           title: "Contract multi-year carbon credit sales from Rwanda program",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 75 },
             { period: "Nov 2025", date: "2025-11-15", pct: 90 },
@@ -73,6 +78,7 @@ const GRANT_DATA = {
           id: "1e",
           title: "Generate first watershed carbon credits under Regen Registry",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 40 },
             { period: "Nov 2025", date: "2025-11-15", pct: 40 },
@@ -86,6 +92,7 @@ const GRANT_DATA = {
           id: "1f",
           title: "Develop ~$20M investment fund (Total Impact Capital)",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 30 },
@@ -99,6 +106,7 @@ const GRANT_DATA = {
           id: "1g",
           title: "Generate avoided-emissions credits from Turkey/Netafim",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 35 },
@@ -112,6 +120,7 @@ const GRANT_DATA = {
           id: "1h",
           title: "Sell first credits from pooled global water-security portfolio",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 5 },
             { period: "Nov 2025", date: "2025-11-15", pct: 5 },
@@ -131,6 +140,7 @@ const GRANT_DATA = {
           id: "2a",
           title: "Get CDPHE approval for Yampa River as SB24-037 pilot",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -144,6 +154,7 @@ const GRANT_DATA = {
           id: "2b",
           title: "Contract with utility for credit generation services",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -157,6 +168,7 @@ const GRANT_DATA = {
           id: "2c",
           title: "Work with CDPHE to formally consider watershed credit pilot",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 35 },
@@ -170,6 +182,7 @@ const GRANT_DATA = {
           id: "2d",
           title: "Complete credit generation under Regen Registry",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 50 },
             { period: "Nov 2025", date: "2025-11-15", pct: 50 },
@@ -183,6 +196,7 @@ const GRANT_DATA = {
           id: "2e",
           title: "Implement agricultural land-management changes",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 30 },
@@ -202,6 +216,7 @@ const GRANT_DATA = {
           id: "3a",
           title: "Contract with Wisconsin utility for credit generation",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 20 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -215,6 +230,7 @@ const GRANT_DATA = {
           id: "3b",
           title: "Contract with 3rd-party Verifier and Registry Agent",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -228,6 +244,7 @@ const GRANT_DATA = {
           id: "3c",
           title: "Receive approval of project documents from Verifier",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 30 },
@@ -241,6 +258,7 @@ const GRANT_DATA = {
           id: "3d",
           title: "Contract credit sales with at least one new buyer",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 5 },
             { period: "Nov 2025", date: "2025-11-15", pct: 5 },
@@ -260,6 +278,7 @@ const GRANT_DATA = {
           id: "4a",
           title: "Complete national interviews and research",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -273,6 +292,7 @@ const GRANT_DATA = {
           id: "4b",
           title: "Publish peer-reviewed journal article",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 75 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -286,6 +306,7 @@ const GRANT_DATA = {
           id: "4c",
           title: "Continue national engagement at conferences",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 65 },
             { period: "Nov 2025", date: "2025-11-15", pct: 70 },
@@ -305,6 +326,7 @@ const GRANT_DATA = {
           id: "5a",
           title: "Collect and analyze data from top-priority US states",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -318,6 +340,7 @@ const GRANT_DATA = {
           id: "5b",
           title: "Analyze data and construct credit projection formulas",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -331,6 +354,7 @@ const GRANT_DATA = {
           id: "5c",
           title: "Identify top 10 US states by credit volume",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 25 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -350,6 +374,7 @@ const GRANT_DATA = {
           id: "6a",
           title: "Laboratory testing for tryptophan response (Lume 1.0)",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 50 },
             { period: "Nov 2025", date: "2025-11-15", pct: 50 },
@@ -363,6 +388,7 @@ const GRANT_DATA = {
           id: "6b",
           title: "Test Lume 1.0 performance in field deployments",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 80 },
             { period: "Nov 2025", date: "2025-11-15", pct: 95 },
@@ -376,6 +402,7 @@ const GRANT_DATA = {
           id: "6c",
           title: "Develop ML algorithm for E.coli estimation",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 55 },
             { period: "Nov 2025", date: "2025-11-15", pct: 85 },
@@ -395,6 +422,7 @@ const GRANT_DATA = {
           id: "7a",
           title: "Client-needs discovery with water sector partners",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 20 },
             { period: "Nov 2025", date: "2025-11-15", pct: 60 },
@@ -408,6 +436,7 @@ const GRANT_DATA = {
           id: "7b",
           title: "Use E.coli estimates to support water quality decisions",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 10 },
             { period: "Nov 2025", date: "2025-11-15", pct: 10 },
@@ -421,6 +450,7 @@ const GRANT_DATA = {
           id: "7c",
           title: "Build global dataset of E.coli measurements",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 50 },
             { period: "Nov 2025", date: "2025-11-15", pct: 60 },
@@ -434,6 +464,7 @@ const GRANT_DATA = {
           id: "7d",
           title: "Test algorithms for estimating water quality parameters",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 50 },
@@ -453,6 +484,7 @@ const GRANT_DATA = {
           id: "8a",
           title: "Analyze Yampa River data 2023-2025, support publication",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -466,6 +498,7 @@ const GRANT_DATA = {
           id: "8b",
           title: "Integrate land use/cover data into analytical pipeline",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 10 },
             { period: "Nov 2025", date: "2025-11-15", pct: 10 },
@@ -479,6 +512,7 @@ const GRANT_DATA = {
           id: "8c",
           title: "E.coli response to wastewater treatment model",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 10 },
             { period: "Oct 2025", date: "2025-10-15", pct: 10 },
             { period: "Nov 2025", date: "2025-11-15", pct: 10 },
@@ -498,6 +532,7 @@ const GRANT_DATA = {
           id: "9a",
           title: "Get CDPHE approval for 3 regional pilot facilities",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 25 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -511,6 +546,7 @@ const GRANT_DATA = {
           id: "9b",
           title: "Finalize 3-year implementation plan with CDPHE",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 25 },
             { period: "Oct 2025", date: "2025-10-15", pct: 100 },
             { period: "Nov 2025", date: "2025-11-15", pct: 100 },
@@ -524,6 +560,7 @@ const GRANT_DATA = {
           id: "9c",
           title: "Draft comparative analysis of watershed credit programs",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 25 },
             { period: "Oct 2025", date: "2025-10-15", pct: 90 },
             { period: "Nov 2025", date: "2025-11-15", pct: 95 },
@@ -537,6 +574,7 @@ const GRANT_DATA = {
           id: "9d",
           title: "Finalize 3 regional pilots moving toward implementation",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 40 },
             { period: "Nov 2025", date: "2025-11-15", pct: 50 },
@@ -550,6 +588,7 @@ const GRANT_DATA = {
           id: "9e",
           title: "Deliver final SB24-037 implementation document to CDPHE",
           history: [
+            { period: "Jun 2025", date: "2025-06-05", pct: 0 },
             { period: "Jul 2025", date: "2025-07-15", pct: 0 },
             { period: "Oct 2025", date: "2025-10-15", pct: 30 },
             { period: "Nov 2025", date: "2025-11-15", pct: 40 },

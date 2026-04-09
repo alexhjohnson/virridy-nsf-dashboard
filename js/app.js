@@ -163,13 +163,13 @@ function renderOverview() {
 }
 
 /* ─── Detail ─── */
-function renderDetail(objId, selectedPeriod) {
+function renderDetail(objId) {
   destroyCharts();
 
   const obj = GRANT_DATA.objectives.find(o => o.id === objId);
   if (!obj) return;
 
-  const period = selectedPeriod || latestPeriod;
+  const period = latestPeriod;
 
   // Update nav: show this as a detail view but keep Overview highlighted
   navLinks.forEach(l => l.classList.remove('active'));
@@ -189,13 +189,6 @@ function renderDetail(objId, selectedPeriod) {
           <div style="font-size:0.8125rem;color:var(--virridy-text-muted);margin-top:2px">${obj.milestones.length} milestones &middot; ${getAvgPct(obj, period)}% average progress</div>
         </div>
       </div>
-    </div>
-
-    <div class="period-selector">
-      <label>Report Period:</label>
-      <select id="period-select">
-        ${periods.map(p => `<option value="${p.period}" ${p.period === period ? 'selected' : ''}>${p.period}</option>`).join('')}
-      </select>
     </div>
 
     <div class="milestone-list">
@@ -232,11 +225,6 @@ function renderDetail(objId, selectedPeriod) {
 
   // Wire back button
   document.getElementById('back-btn').addEventListener('click', renderOverview);
-
-  // Wire period selector
-  document.getElementById('period-select').addEventListener('change', (e) => {
-    renderDetail(objId, e.target.value);
-  });
 
   // Create charts
   obj.milestones.forEach(m => {
@@ -315,14 +303,6 @@ function renderTimeline(selectedIdx) {
         <div class="timeline-line"></div>
   `;
 
-  // Start node
-  html += `
-    <div class="timeline-node" style="opacity:0.5">
-      <div class="timeline-dot" style="background:var(--virridy-dark-green)"></div>
-      <span class="timeline-label">Jun 2025<br><span style="font-weight:400;font-size:0.625rem">Start</span></span>
-    </div>
-  `;
-
   periods.forEach((p, i) => {
     html += `
       <div class="timeline-node ${i === idx ? 'active' : ''}" data-period-idx="${i}">
@@ -361,9 +341,12 @@ function renderTimeline(selectedIdx) {
     const delta = avg - prevAvg;
 
     html += `
-      <tr class="${changed ? 'milestone-changed' : ''}">
+      <tr class="obj-row ${changed ? 'milestone-changed' : ''}" data-obj-toggle="${obj.id}" style="cursor:pointer">
         <td><span class="obj-number ${statusColor(avg)}" style="width:24px;height:24px;font-size:0.6875rem">${obj.id}</span></td>
-        <td style="font-weight:500">${obj.title}</td>
+        <td style="font-weight:500">
+          <span class="toggle-icon" data-toggle-icon="${obj.id}" style="display:inline-block;width:16px;font-size:0.625rem;color:var(--virridy-text-muted);transition:transform 0.15s">&#9654;</span>
+          ${obj.title}
+        </td>
         <td style="text-align:right;font-weight:700;color:${statusHex(avg)}">
           ${avg}%
           ${changed && delta > 0 ? `<span class="change-indicator">+${delta}%</span>` : ''}
@@ -376,33 +359,31 @@ function renderTimeline(selectedIdx) {
       </tr>
     `;
 
-    // Show individual milestones that changed
-    if (prevPeriod) {
-      obj.milestones.forEach(m => {
-        const h = m.history.find(h => h.period === selectedPeriod);
-        const ph = m.history.find(h => h.period === prevPeriod);
-        const pct = h ? h.pct : 0;
-        const prevPct = ph ? ph.pct : 0;
-        if (pct !== prevPct) {
-          const d = pct - prevPct;
-          html += `
-            <tr class="milestone-changed">
-              <td></td>
-              <td style="padding-left:40px;font-size:0.75rem;color:var(--virridy-text-muted)">${m.id}: ${m.title}</td>
-              <td style="text-align:right;font-size:0.75rem;font-weight:600;color:${statusHex(pct)}">
-                ${pct}%
-                <span class="change-indicator">${d > 0 ? '+' : ''}${d}%</span>
-              </td>
-              <td>
-                <div class="progress-bar" style="height:4px">
-                  <div class="progress-fill ${statusColor(pct)}" style="width:${pct}%"></div>
-                </div>
-              </td>
-            </tr>
-          `;
-        }
-      });
-    }
+    // Show ALL milestones (hidden by default, toggled by clicking objective row)
+    obj.milestones.forEach(m => {
+      const h = m.history.find(h => h.period === selectedPeriod);
+      const ph = prevPeriod ? m.history.find(h => h.period === prevPeriod) : null;
+      const pct = h ? h.pct : 0;
+      const prevPct = ph ? ph.pct : 0;
+      const mChanged = prevPeriod && pct !== prevPct;
+      const d = pct - prevPct;
+
+      html += `
+        <tr class="milestone-sub-row ${mChanged ? 'milestone-changed' : ''}" data-obj-children="${obj.id}" style="display:none">
+          <td></td>
+          <td style="padding-left:40px;font-size:0.75rem;color:var(--virridy-text-muted)">${m.id}: ${m.title}</td>
+          <td style="text-align:right;font-size:0.75rem;font-weight:600;color:${statusHex(pct)}">
+            ${pct}%
+            ${mChanged ? `<span class="change-indicator">${d > 0 ? '+' : ''}${d}%</span>` : ''}
+          </td>
+          <td>
+            <div class="progress-bar" style="height:4px">
+              <div class="progress-fill ${statusColor(pct)}" style="width:${pct}%"></div>
+            </div>
+          </td>
+        </tr>
+      `;
+    });
   });
 
   html += `
@@ -418,6 +399,18 @@ function renderTimeline(selectedIdx) {
   document.querySelectorAll('.timeline-node[data-period-idx]').forEach(node => {
     node.addEventListener('click', () => {
       renderTimeline(parseInt(node.dataset.periodIdx));
+    });
+  });
+
+  // Wire collapse/expand toggles
+  document.querySelectorAll('[data-obj-toggle]').forEach(row => {
+    row.addEventListener('click', () => {
+      const objId = row.dataset.objToggle;
+      const children = document.querySelectorAll(`[data-obj-children="${objId}"]`);
+      const icon = document.querySelector(`[data-toggle-icon="${objId}"]`);
+      const isExpanded = children[0] && children[0].style.display !== 'none';
+      children.forEach(r => r.style.display = isExpanded ? 'none' : '');
+      if (icon) icon.style.transform = isExpanded ? '' : 'rotate(90deg)';
     });
   });
 }

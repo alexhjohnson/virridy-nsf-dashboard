@@ -492,6 +492,14 @@ body {
   background: rgba(151, 215, 0, 0.06);
 }
 
+.obj-row:hover {
+  background: rgba(0, 81, 81, 0.04);
+}
+
+.milestone-sub-row td {
+  border-bottom-color: rgba(212, 224, 212, 0.5);
+}
+
 /* ─── Footer ─── */
 .footer {
   text-align: center;
